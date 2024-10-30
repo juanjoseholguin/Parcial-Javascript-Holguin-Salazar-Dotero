@@ -26,9 +26,7 @@ function renderProduct() {
     let p Description =  document.getElementById("Description");
     p.innerHTML  =  productt.Description;
 
-    let mainImg =   document.getElementById("main-img");
-    mainImg.src = productt.images[0]
-
+    
 
 
 
