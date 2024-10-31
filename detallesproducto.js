@@ -12,6 +12,7 @@ function getProduct(name) {
   return null;
 }
 
+
 function renderProduct() {
   let productt = getProduct(namefromUrl);
 
@@ -33,3 +34,4 @@ function renderProduct() {
 }
 
 window.onload = renderProduct;
+
