@@ -7,8 +7,10 @@ let producto = {
     Color: ["Negro", "Gris", "Azul"],
     Disponible: 10,
     Photo: "https://raw.githubusercontent.com/juanjoseholguin/Parcial-2/main/Nike%20hoodie.jpg"
-  };
-  
+    ,const: html = `
+    <img src="${producto.Photo}" alt="https://raw.githubusercontent.com/juanjoseholguin/Parcial-2/main/Nike%20hoodie.jpg" style="width: 200px;">`,
+  }
+  ag
   
   function mostrarProducto() {
     const contenedor = document.getElementById("producto");
@@ -20,6 +22,7 @@ let producto = {
       <p>Color: ${producto.Color.join(", ")}</p>
       <p>Disponible: ${producto.Disponible}</p>
       <img src="${producto.Photo}" alt="https://raw.githubusercontent.com/juanjoseholguin/Parcial-2/main/Nike%20hoodie.jpg">
+
     `;
   }
   

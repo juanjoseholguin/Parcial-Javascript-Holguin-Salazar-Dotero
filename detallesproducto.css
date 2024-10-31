@@ -140,3 +140,7 @@ footer p {
 .continue-shopping:hover {
   background-color: #0056b3; 
 }
+
+.continue-shopping:active {
+  background-color: #003087; /
+}
