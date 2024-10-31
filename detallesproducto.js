@@ -13,7 +13,7 @@ function getProduct  ( nam) {
 
     }
 
-function renderProduct() {
+    function renderProduct() {
     let productt = getProduct()
 
     let h1Title =  document.getElementById("title");
@@ -23,18 +23,12 @@ function renderProduct() {
     h3Title. innerHTML =  productt.Price; 
 
 
-    let p Description =  document.getElementById("Description");
+    let p ,description =  document.getElementById("Description");
     p.innerHTML  =  productt.Description;
-
-    
-
-
-
-
-}
-
 }
 
 renderPorduct()
+}
+
 
 
