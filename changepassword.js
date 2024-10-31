@@ -1,22 +1,45 @@
 function cambiarContrasena() {
-    // Obtener los valores de las contraseñas
     var contrasenaActual = document.getElementById("contrasenaActual").value;
     var nuevaContrasena = document.getElementById("nuevaContrasena").value;
     var confirmarContrasena = document.getElementById("confirmarContrasena").value;
 
-    // Validar que la nueva contraseña no sea igual a la actual
-    if (nuevaContrasena === contrasenaActual) {
-        alert("La nueva contraseña no puede ser igual a la contraseña actual.");
-        return false; // Detener el envío del formulario
+    
+    var usuarioGuardado = JSON.parse(localStorage.getItem(document.getElementById("email").value));
+
+    
+    if (!usuarioGuardado || usuarioGuardado.password !== contrasenaActual) {
+        alert("La contrasena actual es incorrecta.");
+        return false; 
     }
 
-    // Validar que la nueva contraseña y la confirmación sean iguales
+    
+    if (nuevaContrasena === contrasenaActual) {
+        alert("La nueva contrasena no puede ser igual a la contraseña actual.");
+        return false; 
+    }
+
+    
     if (nuevaContrasena !== confirmarContrasena) {
         alert("La nueva contraseña y la confirmación no coinciden.");
-        return false; // Detener el envío del formulario
+        return false; 
     }
 
-    // Si todo está bien, se puede proceder a enviar el formulario
-    alert("Contraseña cambiada exitosamente.");
-    return true; // Permitir el envío del formulario
+    
+    usuarioGuardado.password = nuevaContrasena;
+    localStorage.setItem(document.getElementById("email").value, JSON.stringify(usuarioGuardado));
+
+    
+    mostrarMensajeExito();
+    return true; 
+}
+
+function mostrarMensajeExito() {
+    const contenedor = document.createElement('div');
+    contenedor.style.textAlign = 'center';
+    contenedor.innerHTML = `
+        <p>Contrasena cambiada exitosamente.</p>
+        <p><a href="login.html" style="color: #f09300; text-decoration: underline;">Haz clic aquí para ir al Login</a></p>
+    `;
+    document.body.innerHTML = ''; 
+    document.body.appendChild(contenedor); 
 }

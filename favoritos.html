@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Wishlist</title>
-  <link rel="stylesheet" href="favoritos.css">
+  <title>Favoritos - TrendyFind</title>
+  <link rel="stylesheet" href="index.css">
 </head>
 <body>
   <header>
     <div class="container">
       <div class="logo">
-        <a href="index.html">
+        <a href="Landing page.html"> 
           <img src="Mesa de trabajo 5.png" alt="Flower Icon">
         </a>
       </div>
@@ -16,34 +16,23 @@
         <input type="text" placeholder="Search">
       </div>
       <div class="user-actions">
-        <!-- Se eliminan los botones de favoritos y carrito aquí -->
+        <a href="user.html"> <span class="user-icon"></span> </a> 
+        <a href="favoritos.html"> <span class="heart-icon"></span> </a> 
       </div>
     </div>
   </header>
 
   <main class="container">
-    <h1>Wishlist</h1>
-    <div class="product-grid">
-      <div class="product-card">
-        <a href="detalleproducto1.html"> <!-- Cada producto lleva a una página diferente -->
-          <img src="nike_hoodie.webp" alt="Nike Hoodie">
-        </a>
-        <div class="product-info">
-          <h3>Nike Hoodie</h3>
-          <p>$100.00 USD</p>
-        </div>
-        <div class="product-actions">
-          <button class="favorite-button" onclick="toggleFavorite(this)">❤️ Favoritos</button>
-          <button class="cart-button">🛒 Agregar al carrito</button>
-        </div>
-      </div>
-      <!-- Repite el bloque anterior para cada producto, cambiando el enlace en el <a> -->
-    </div>
+    <div class="product-grid" id="favorites"></div>
   </main>
 
   <footer>
-    <p>&copy; 2024 TrendyFind Juan José Holguín & Jacobo Salazar.</p>
+    <script src="data.js"></script>
+    <script src="Product.js"></script>
+    <script src="favoritos.js"></script>
+    <div class="container">
+      <p>&copy; 2024 TrendyFind Juan José Holguín & Jacobo Salazar.</p>
+    </div>
   </footer>
 </body>
 </html>
-

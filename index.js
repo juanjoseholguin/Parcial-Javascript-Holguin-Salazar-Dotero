@@ -50,7 +50,6 @@ function productselected(pos) {
   window.location.href = `detallesproducto.html?name=${encodeURIComponent(selectedProduct.Title)}`;
 }
 
-// Cambia window.onload a un evento DOMContentLoaded
 document.addEventListener("DOMContentLoaded", function() {
   parseDataToProducts();
 });

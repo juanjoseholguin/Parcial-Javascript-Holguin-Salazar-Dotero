@@ -9,7 +9,7 @@ let producto1 = {
 };
 
 let producto2 = {
-  Title: "Nike Boys Fleece Hoodie with Kangaroo Pocket and Swoosh Logo",
+  Title: "Nike Boys Fleece Hoodie",
   Price: 30.00,
   Description: "This Nike Boys Fleece Hoodie features a kangaroo pocket and a Swoosh logo, making it perfect for any occasion. The soft material provides warmth and comfort throughout the day.",
   Size: ["S", "M", "L", "XL"],
